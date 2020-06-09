@@ -1,7 +1,5 @@
-
 #Secuencia de Collatz: 
-#Carne: 201612268  = 268 Numero 
-
+#Carne: 201612268  = 268 Numero
 
 CARNE = 268  # ultimos 3 digitos del carne
 listaC = [] # lista donde se escribiran los resultados
@@ -12,7 +10,7 @@ def secuencia(valor1): #funcion que determina si es par o impar
         salidaT = int(valor1/2)
     else:
         salidaT = int(valor1*3 +1) # sino es PAR entonces es IMPAR
-    return salidaT # valor de retorno de la funcion
+    return salidaT # valor de retorno de la funcionp
 
 listaTotal  = [] # definir una matriz total
 j = 2   # definimos un valor para 

@@ -15,7 +15,7 @@ def secuencia(valor1): #funcion que determina si es par o impar
 listaTotal  = [] # definir una matriz total
 j = 2   # definimos un valor para 
 bandera = True  # bandera para terminar un ciclo
-for i in range(0,CARNE):    # las veces que se escribira en la lista
+for i in range(0,CARNE-1):    # las veces que se escribira en la lista
     listaC = [] # vaciando la lista
     bandera = True  #reiniciando la bandera para que entre al ciclo de nuevo
     temporal = j    # valor para ingresar a la lista al principio una vez esta termine, este es el numero por el cual va la lista, su primer valor

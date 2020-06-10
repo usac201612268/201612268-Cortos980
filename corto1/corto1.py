@@ -1,8 +1,18 @@
 #Secuencia de Collatz: 
 #Carne: 201612268  = 268 Numero
+import time
 
 CARNE = 268  # ultimos 3 digitos del carne
 listaC = [] # lista donde se escribiran los resultados
+
+def EscribirAr(fileName = 'collatz.txt'): #funcion para escribir en el .txt
+    archivo = open(fileName,'w')
+    archivo.write('Escribiendo o sobre escribiendo archivo, Secuencia de Collatz\n')
+    print("Un momento por favor en lo que se escribe el archivo ")
+    for i in range(len(listaTotal)):
+        archivo.write(str(listaTotal[i]) + '\n')
+    archivo.close()
+    print("Escritura finalizada")
 
 def secuencia(valor1): #funcion que determina si es par o impar
     salidaT = 0 # definicion de la variable
@@ -27,16 +37,7 @@ for i in range(0,CARNE-1):    # las veces que se escribira en la lista
             listaC.insert(0,temporal) # insertamos el valor evaluado al principo ya sea 2, 3, 4, 5
             listaTotal.append(listaC) # llenar una lista de "listasC"
             bandera = False # bandera para salir el ciclo
-            print(listaC)
+            #print(listaC)
         else:
             k = listaC[-1] # tomar el ultimo valor de la lista para evaluarlo nuevamente en la funcion de PAR IMPAR
-
-"""
-def Escribir(fileName = "collatz.txt"): #funcion para escribir en el .txt
-    archivo = open(fileName='w')
-    archivo.write('Escribiendo o sobreescribiendo archivo')
-    print("Un momento por favor en lo que se escribe el archivo")
-    for i in range(2,len(listaTotal)):
-        time.sleep(1)
-    archivo.close()
-    print("Escritura finalizada") """
+EscribirAr()
